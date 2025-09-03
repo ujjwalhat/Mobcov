@@ -1,8 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['utfs.io'],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**.ufs.sh", // allow all subdomains of ufs.sh
+      },
+      {
+        protocol: "https",
+        hostname: "utfs.io", // keep utfs.io too
+      },
+    ],
   },
-}
+};
 
-export default nextConfig
+export default nextConfig;
