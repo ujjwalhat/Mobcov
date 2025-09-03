@@ -76,7 +76,7 @@ export async function POST(req: Request) {
 
       // Send confirmation email
       await resend.emails.send({
-        from: "mobcov <ujjwalhat@gmail.com.com>",
+        from: "mobcov <ujjwal31072002@gmail.com>",
         to: [session.customer_details.email],
         subject: "Thanks for your order!",
         react: OrderReceivedEmail({
